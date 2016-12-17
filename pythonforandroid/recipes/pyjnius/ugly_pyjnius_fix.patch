@@ -1,0 +1,11 @@
+--- ./jnius/reflect.py	2016-10-27 09:12:14.000000000 +0300
++++ ./jnius/reflect.py_fix	2016-12-17 03:05:07.574013000 +0300
+@@ -143,6 +143,8 @@
+     return (s.startswith('get') and len(s) > 3 and s[3].isupper()) or (s.startswith('is') and len(s) > 2 and s[2].isupper())
+ 
+ def autoclass(clsname):
++    if clsname == 'org.renpy.android.PythonActivity':
++        clsname = 'org.kivy.android.PythonActivity'
+     jniname = clsname.replace('.', '/')
+     cls = MetaJavaClass.get_javaclass(jniname)
+     if cls:
