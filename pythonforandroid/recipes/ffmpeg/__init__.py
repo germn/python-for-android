@@ -4,8 +4,7 @@ import sh
 
 
 class FFMpegRecipe(Recipe):
-    version = '007e03348dbd8d3de3eb09022d72c734a8608144'
-    # Moved to github.com instead of ffmpeg.org to improve download speed
+    version = '6bdfea8d4b3683605f47994e491770bc0bc6ce5d'
     url = 'https://github.com/FFmpeg/FFmpeg/archive/{version}.zip'
     depends = ['sdl2']  # Need this to build correct recipe order
     opts_depends = ['openssl', 'ffpyplayer_codecs']

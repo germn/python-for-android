@@ -7,8 +7,8 @@ import sh
 
 
 class LibX264Recipe(Recipe):
-    version = 'x264-snapshot-20171218-2245-stable'  # using mirror url since can't use ftp
-    url = 'http://mirror.yandex.ru/mirrors/ftp.videolan.org/x264/snapshots/{version}.tar.bz2'
+    version = 'db0d417728460c647ed4a847222a535b00d3dbcb'
+    url = 'https://github.com/mirror/x264/archive/{version}.zip'
     built_libraries = {'libx264.a': 'lib'}
 
     def build_arch(self, arch):
